@@ -11,7 +11,8 @@ var mongoShutDown = function (msg, callback) {
 
 mongoose.connect(dbURI, {
   useNewUrlParser: true,
-  useUnifiedTopology: true
+  useUnifiedTopology: true,
+  useCreateIndex: true
 });
 
 mongoose.connection.on('connected', function () {
